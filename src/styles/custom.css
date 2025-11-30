@@ -2,3 +2,24 @@ main#home {
     width: 100%;
     margin-top: auto;
 }
+
+/* Mobile Styles */
+@media only screen and (max-width: 480px) {
+    div#form-controls {
+        gap: 16px;
+    }
+
+    div#form-controls button {
+        width: 150px;
+    }
+}
+
+@media only screen and (min-width: 481px) {
+    div#form-controls {
+        gap: 150px;
+    }
+
+    div#form-controls button {
+        width: 200px;
+    }
+}
