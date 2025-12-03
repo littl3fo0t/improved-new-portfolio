@@ -3,6 +3,7 @@
 import Menu from "../components/Menu";
 import skills from "../data/skills";
 import Tags from "../components/Tags";
+import Footer from "../components/Footer";
 
 const About = () => {
     return (
@@ -34,6 +35,8 @@ const About = () => {
                     </div>
                 </div>
             </div>
+
+            <Footer />
         </>
 
     );

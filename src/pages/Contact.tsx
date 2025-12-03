@@ -1,5 +1,6 @@
 // Contact Page
 
+import Footer from "../components/Footer";
 import Menu from "../components/Menu";
 
 const Contact = () => {
@@ -16,38 +17,32 @@ const Contact = () => {
                 </section>
                 <section className="container">
                     <form className="mt-4">
-                        <div className="columns">
-                            <div className="column">
-                                <div className="field">
-                                    <label htmlFor="name" className="label">Name</label>
-                                    <div className="control has-icons-left">
-                                        <input type="text"
-                                            placeholder="Enter your name"
-                                            className="input"
-                                            id="name"
-                                            required
-                                        />
-                                        <span className="icon is-small is-left">
-                                            <i className="fas fa-user"></i>
-                                        </span>
-                                    </div>
-                                </div>
+                        <div className="field">
+                            <label htmlFor="name" className="label">Name</label>
+                            <div className="control has-icons-left">
+                                <input type="text"
+                                    placeholder="Enter your name"
+                                    className="input"
+                                    id="name"
+                                    required
+                                />
+                                <span className="icon is-small is-left">
+                                    <i className="fas fa-user"></i>
+                                </span>
                             </div>
-                            <div className="column">
-                                <div className="field">
-                                    <label htmlFor="email" className="label">Email</label>
-                                    <div className="control has-icons-left">
-                                        <input type="email"
-                                            placeholder="Enter your email"
-                                            className="input"
-                                            id="email"
-                                            required
-                                        />
-                                        <span className="icon is-small is-left">
-                                            <i className="fas fa-envelope"></i>
-                                        </span>
-                                    </div>
-                                </div>
+                        </div>
+                        <div className="field">
+                            <label htmlFor="email" className="label">Email</label>
+                            <div className="control has-icons-left">
+                                <input type="email"
+                                    placeholder="Enter your email"
+                                    className="input"
+                                    id="email"
+                                    required
+                                />
+                                <span className="icon is-small is-left">
+                                    <i className="fas fa-envelope"></i>
+                                </span>
                             </div>
                         </div>
                         <div className="field">
@@ -80,6 +75,8 @@ const Contact = () => {
                     </form>
                 </section>
             </main>
+
+            <Footer />
         </>
 
     );

@@ -5,12 +5,13 @@ import { Link } from "react-router-dom";
 const Menu: React.FC = () => {
     return (
         <header className="container">
-            <nav className="navbar is-spaced" role="navigation" aria-label="main navigation">
+            <nav className="navbar is-spaced has-shadow" role="navigation" aria-label="main navigation">
                 <div className="navbar-brand">
                     <Link to="/" className="navbar-item">
                         <img src="https://bulma.io/assets/images/placeholders/48x48.png" alt="placeholder" className="image image is-48x48" />
                     </Link>
                     <button role="button" className="navbar-burger" aria-label="menu" aria-expanded="false" data-target="menu">
+                        <span aria-hidden="true"></span>
                         <span aria-hidden="true"></span>
                         <span aria-hidden="true"></span>
                         <span aria-hidden="true"></span>
