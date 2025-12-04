@@ -17,6 +17,10 @@ footer div {
     div#form-controls button {
         width: 150px;
     }
+
+    div.navbar-item a, div.navbar-item div.select, div.navbar-item select {
+        width: 100%;
+    }
 }
 
 @media only screen and (min-width: 481px) {

@@ -1,6 +1,6 @@
 // About Page
 
-import Menu from "../components/Menu";
+import Header from "../components/Header";
 import skills from "../data/skills";
 import Tags from "../components/Tags";
 import Footer from "../components/Footer";
@@ -10,8 +10,8 @@ const About = () => {
         <>
             <title>Thomas Brun | About Me</title>
 
-            <Menu />
-            
+            <Header />
+
             <div className="container">
                 <h1 className="title is-spaced is-size-1-desktop is-size-2-tablet is-size-3-mobile has-text-centered">About Me</h1>
                 <div className="columns">

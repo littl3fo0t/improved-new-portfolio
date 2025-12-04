@@ -1,14 +1,14 @@
 // Contact Page
 
 import Footer from "../components/Footer";
-import Menu from "../components/Menu";
+import Header from "../components/Header";
 
 const Contact = () => {
     return (
         <>
             <title>Thomas Brun | Contact</title>
 
-            <Menu />
+            <Header />
 
             <main>
                 <section className="container has-text-centered">

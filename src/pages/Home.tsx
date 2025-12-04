@@ -1,13 +1,13 @@
 // Home Page
 
-import Menu from "../components/Menu";
+import Header from "../components/Header";
 import Footer from "../components/Footer";
 
 const Home = () => {
     return (
         <>
             <title>Thomas Brun | Full-Stack Developer</title>
-            <Menu />
+            <Header />
 
             <main className="container has-text-centered">
                 <h1 className="title is-spaced is-size-1-desktop is-size-2-tablet is-size-3-mobile">Application Developer, Systems Analyst & Aspiring Full-Stack Developer</h1>

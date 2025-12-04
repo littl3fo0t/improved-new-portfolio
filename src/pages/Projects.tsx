@@ -1,14 +1,14 @@
 // Projects page
 
 import Footer from "../components/Footer";
-import Menu from "../components/Menu";
+import Header from "../components/Header";
 
 const Projects: React.FC = () => {
     return (
         <>
             <title>Thomas Brun | My Projects</title>
 
-            <Menu />
+            <Header />
 
             <main>
                 <div className="container has-text-centered">
