@@ -19,7 +19,7 @@ footer div {
     padding: 10px 0px;
 }
 
-/* Mobile Styles */
+/* Mobile Styles ONLY */
 @media only screen and (max-width: 480px) {
 
     div#form-controls {
@@ -29,7 +29,10 @@ footer div {
     div#form-controls button {
         width: 150px;
     }
+}
 
+/* Mobile and Tablet Styles */
+@media only screen and (max-width: 1023px) {
     div.navbar-item a,
     div.navbar-item div.select,
     div.navbar-item select {

@@ -22,7 +22,7 @@ const Menu: React.FC = () => {
     };
 
     return (
-        <header className="container">
+        <header className="container mb-4">
             <nav className="navbar is-spaced has-shadow" role="navigation" aria-label="main navigation">
                 <div className="navbar-brand">
                     <Link to="/" className="navbar-item">
@@ -35,7 +35,7 @@ const Menu: React.FC = () => {
                         <span aria-hidden="true"></span>
                     </button>
                 </div>
-                <div className={isActive ? "navbar-menu is-active" : "navbar-menu"} id="menu">
+                <div className={`navbar-menu ${isActive ? "is-active" : ""}`} id="menu">
                     <div className="navbar-start">
                         <div className="navbar-item">
                             <Link to="/about" className="button is-rounded">
