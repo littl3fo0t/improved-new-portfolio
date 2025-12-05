@@ -3,19 +3,48 @@
 import { useState } from "react";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
+import Error from "../components/Error";
+import Success from "../components/Success";
+import sendEmail from "../utils/sendEmail";
 
 const Contact = () => {
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
     const [message, setMessage] = useState("");
+    const [isLoading, setIsLoading] = useState(false);
+    const [isSuccess, setIsSuccess] = useState(false);
+    const [isFail, setIsFail] = useState(false);
+    const [error, setError] = useState("");
 
     const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault();
 
-        console.log("Name:", name);
-        console.log("Email:", email);
-        console.log("Message:", message);
+        // Validate form input
+        if (!name || name.trim() === "" || !email || email.trim() === "" || !message || message.trim() === "") { // validation failed
+            setIsFail(true);
+            setError("One of the required fields was not filled out properly. Please double check and try again.");
+        } else {
+            setIsLoading(true);
+            // setIsSuccess(true);
+
+            // console.log("Name:", name);
+            // console.log("Email:", email);
+            // console.log("Message:", message);
+            
+
+            //setIsLoading(false);
+        }
     };
+
+    const handleReset = () => {
+        setName("");
+        setEmail("");
+        setMessage("");
+        setIsLoading(false);
+        setIsFail(false);
+        setIsSuccess(false)
+        setError("");
+    }
     return (
         <>
             <title>Thomas Brun | Contact</title>
@@ -27,8 +56,12 @@ const Contact = () => {
                     <h1 className="title is-spaced is-size-1-desktop is-size-2-tablet is-size-3-mobile">Contact</h1>
                     <p className="subtitle is-spaced is-size-2-desktop is-size-3-tablet is-size-4-mobile">Feel free to reach out to me and I will back to you ASAP 😎</p>
                 </section>
-                <section className="container" onSubmit={handleSubmit}>
-                    <form className="mt-4">
+                <div className="container mt-4">
+                    { isFail && <Error error={error} /> }
+
+                    { isSuccess && <Success /> }
+
+                    <form className="box mt-4" onSubmit={handleSubmit}>
                         <div className="field">
                             <label htmlFor="name" className="label">Name</label>
                             <div className="control has-icons-left">
@@ -76,14 +109,14 @@ const Contact = () => {
                                 </textarea>
                             </div>
                         </div>
-                        <div className="container is-flex is-justify-content-center" id="form-controls">
-                            <button className="button is-primary is-rounded" type="submit">
+                        <div className="is-flex is-justify-content-center" id="form-controls">
+                            <button className={`button is-primary is-rounded ${isLoading ? "is-loading": ""}`} type="submit" disabled={isLoading}>
                                 <span className="icon">
                                     <i className="fas fa-check-circle"></i>
                                 </span>
                                 <span>Submit</span>
                             </button>
-                            <button className="button is-danger is-rounded" type="reset">
+                            <button className="button is-danger is-rounded" type="reset" onClick={handleReset}>
                                 <span className="icon">
                                     <i className="fas fa-trash-alt"></i>
                                 </span>
@@ -91,7 +124,7 @@ const Contact = () => {
                             </button>
                         </div>
                     </form>
-                </section>
+                </div>
             </main>
 
             <Footer />
