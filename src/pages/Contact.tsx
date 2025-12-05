@@ -1,9 +1,21 @@
 // Contact Page
 
+import { useState } from "react";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
 
 const Contact = () => {
+    const [name, setName] = useState("");
+    const [email, setEmail] = useState("");
+    const [message, setMessage] = useState("");
+
+    const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+        event.preventDefault();
+
+        console.log("Name:", name);
+        console.log("Email:", email);
+        console.log("Message:", message);
+    };
     return (
         <>
             <title>Thomas Brun | Contact</title>
@@ -15,7 +27,7 @@ const Contact = () => {
                     <h1 className="title is-spaced is-size-1-desktop is-size-2-tablet is-size-3-mobile">Contact</h1>
                     <p className="subtitle is-spaced is-size-2-desktop is-size-3-tablet is-size-4-mobile">Feel free to reach out to me and I will back to you ASAP 😎</p>
                 </section>
-                <section className="container">
+                <section className="container" onSubmit={handleSubmit}>
                     <form className="mt-4">
                         <div className="field">
                             <label htmlFor="name" className="label">Name</label>
@@ -24,6 +36,8 @@ const Contact = () => {
                                     placeholder="Enter your name"
                                     className="input"
                                     id="name"
+                                    value={name}
+                                    onChange={ e => setName(e.target.value) }
                                     required
                                 />
                                 <span className="icon is-small is-left">
@@ -38,6 +52,8 @@ const Contact = () => {
                                     placeholder="Enter your email"
                                     className="input"
                                     id="email"
+                                    value={email}
+                                    onChange={ e => setEmail(e.target.value) }
                                     required
                                 />
                                 <span className="icon is-small is-left">
@@ -53,6 +69,8 @@ const Contact = () => {
                                     className="textarea"
                                     placeholder="Enter your massage"
                                     rows={10}
+                                    value={message}
+                                    onChange={ e => setMessage(e.target.value) }
                                     required
                                 >
                                 </textarea>
