@@ -50,7 +50,7 @@ const Contact = () => {
                 setEmail("");
                 setMessage("");
             } catch (err) {
-                console.log(err);
+                //console.log(err);
                 setIsSuccess(false);
                 setIsFail(true);
                 setError("An unexpected issue has occurred. Please either try again later or reach out to me directly by email at thomas.brun.1703@hotmail.com.");
