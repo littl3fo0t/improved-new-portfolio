@@ -55,6 +55,11 @@ span[data-name="css"] {
     div#form-controls button {
         width: 150px;
     }
+
+    figure#avatar {
+        width: 300px;
+        height: 300px;
+    }
 }
 
 /* Mobile and Tablet Styles */
@@ -73,5 +78,10 @@ span[data-name="css"] {
 
     div#form-controls button {
         width: 200px;
+    }
+
+    figure#avatar {
+        width: 500px;
+        height: 500px;
     }
 }
