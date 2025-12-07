@@ -26,7 +26,7 @@ const Menu: React.FC = () => {
             <nav className="navbar is-spaced has-shadow" role="navigation" aria-label="main navigation">
                 <div className="navbar-brand">
                     <Link to="/" className="navbar-item">
-                        <span className="icon is-large has-text-white">
+                        <span className="icon is-large">
                             <i className="fab fas fa-home fa-2x"></i>
                         </span>
                     </Link>
