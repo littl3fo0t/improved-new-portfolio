@@ -32,6 +32,7 @@ const About = () => {
                     <div className="column">
                         <section className="section">
                             <h2 className="title is-2">My Skills</h2>
+                            <p className="subtitle mt-2">Click on any of them to find out more 👀</p>
                             <Tags skills={sortedSkills} />
                         </section>
                     </div>

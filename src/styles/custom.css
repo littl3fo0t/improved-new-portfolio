@@ -28,7 +28,7 @@ footer div {
 }
 
 /* Tag Styles */
-span[data-name="javascript"] {
+/* span[data-name="javascript"] {
     background-color: var(--javascript-scheme);
 }
 
@@ -43,7 +43,7 @@ span[data-name="html"] {
 span[data-name="css"] {
     background-color: var(--css-scheme);
     color: white;
-}
+} */
 
 /* Mobile Styles ONLY */
 @media only screen and (max-width: 480px) {
