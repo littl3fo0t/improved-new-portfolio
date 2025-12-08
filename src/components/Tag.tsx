@@ -15,7 +15,7 @@ const Tag: React.FC<TagProps> = ({ skill }) => {
         return (
             <Link to={`/projects?tag=${encodedName}`}>
                 <div className="control">
-                    <div className="tags are-medium has-addons">
+                    <div className="tags are-large has-addons">
                         <span className="tag icon is-dark">
                             <i className={iconName?.join(" ")} aria-hidden="true"></i>
                         </span>
@@ -27,7 +27,7 @@ const Tag: React.FC<TagProps> = ({ skill }) => {
     } else {
         return (
             <Link to={`/projects?tag=${encodedName}`}>
-                <span className="tag is-hoverable is-medium" data-name={name}>{displayName}</span>
+                <span className="tag is-hoverable is-large" data-name={name}>{displayName}</span>
             </Link>
 
         );

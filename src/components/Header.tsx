@@ -27,7 +27,7 @@ const Menu: React.FC = () => {
                 <div className="navbar-brand">
                     <Link to="/" className="navbar-item">
                         <span className="icon is-large">
-                            <i className="fab fas fa-home fa-2x"></i>
+                            <i className="fab fas fa-home fa-lg"></i>
                         </span>
                     </Link>
                     <button role="button" className="navbar-burger" aria-label="menu" aria-expanded="false" data-target="menu" onClick={handleClick}>
