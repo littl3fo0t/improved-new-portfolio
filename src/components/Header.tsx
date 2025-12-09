@@ -40,7 +40,7 @@ const Menu: React.FC = () => {
                 <div className={`navbar-menu ${isActive ? "is-active" : ""}`} id="menu">
                     <div className="navbar-start">
                         <div className="navbar-item">
-                            <Link to="/about" className="button is-rounded">
+                            <Link to="/about" className="button is-rounded is-inverted">
                                 <span className="icon">
                                     <i className="fas fa-user" aria-hidden="true"></i>
                                 </span>
@@ -48,7 +48,7 @@ const Menu: React.FC = () => {
                             </Link>
                         </div>
                         <div className="navbar-item">
-                            <Link to="/projects" className="button is-rounded">
+                            <Link to="/projects" className="button is-rounded is-inverted">
                                 <span className="icon">
                                     <i className="fas fa-folder-open" aria-hidden="true"></i>
                                 </span>
@@ -56,7 +56,7 @@ const Menu: React.FC = () => {
                             </Link>
                         </div>
                         <div className="navbar-item">
-                            <Link to="/contact" className="button is-rounded">
+                            <Link to="/contact" className="button is-rounded is-inverted">
                                 <span className="icon">
                                     <i className="fas fa-comment" aria-hidden="true"></i>
                                 </span>
