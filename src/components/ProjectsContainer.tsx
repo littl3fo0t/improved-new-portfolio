@@ -1,4 +1,4 @@
-// // Projects Container Component
+// Projects Container Component
 
 import type React from "react";
 import type { Project } from "../types/project";

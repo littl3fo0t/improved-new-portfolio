@@ -27,12 +27,12 @@ const ProjectDetails: React.FC<ProjectDetailsProps> = ({ id, children }) => {
 
             <Header />
 
-            <main className="container">
+            <main className="container box">
                 <div className="has-text-centered">
                     <h1 className="title is-spaced is-size-1-desktop is-size-2-tablet is-size-3-mobile">{title}</h1>
                 </div>
                 <div className="content">
-                    <section>
+                    <section className="mt-6">
                         <h2 className="is-spaced">Tech Stack</h2>
                         <Tags skills={tags.map(tag => convertTag(tag))} />
                     </section>

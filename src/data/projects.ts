@@ -1,17 +1,18 @@
 import type { Project } from "../types/project";
+import project1Thumbnail from "../assets/images/thumbnails/Project-1.png";
 
 const projects: Project[] = [
     {
         id: 1,
         title: "Yu-Gi-Oh! Card Search App (version 1)",
-        imageUrl: null,
+        imageUrl: project1Thumbnail,
         tags: ["HTML", "CSS", "JavaScript"],
         description: "A simple card search app for the Yu-Gi-Oh! trading card game built using HTML and vanilla JavaScript.",
         links: {
             github: "https://github.com/littl3fo0t/Yu-Gi-Oh-Card-App",
             live: null
         },
-        isComplete: false,
+        isComplete: true,
         createdDate: new Date("2025-04-01")
     },
     {

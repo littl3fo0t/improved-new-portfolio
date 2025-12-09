@@ -3,12 +3,14 @@
 const Project1: React.FC = () => {
     return (
         <>
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum viverra, diam ac pellentesque malesuada, arcu lectus auctor mauris, a pharetra lorem felis vitae nibh. Nulla finibus, risus quis efficitur blandit, mi ex euismod est, a posuere sem orci ac sem. Nam in volutpat risus. Quisque iaculis, neque luctus lobortis finibus, tellus ipsum feugiat quam, eu euismod eros libero eu massa. Sed vestibulum, enim nec accumsan rhoncus, nibh libero porttitor lectus, at mollis nisi nisl maximus ante. Sed feugiat aliquet augue, nec tincidunt nunc sollicitudin in. Cras feugiat efficitur ligula, in euismod felis molestie nec. Nam eleifend lorem eu massa tincidunt ullamcorper. Cras efficitur, purus nec porttitor rhoncus, sem enim efficitur ligula, quis pulvinar ante urna ut mi. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
-            </p>
-            <p>
-                Nullam ac purus ut elit iaculis blandit. Nunc efficitur rutrum ante sed gravida. Mauris ullamcorper a ipsum sed pharetra. Maecenas vehicula facilisis nisi, eget dictum nulla rhoncus quis. In id vulputate nulla. In maximus turpis metus, nec pretium erat fringilla eget. Morbi hendrerit metus et erat interdum, ac vulputate felis dapibus. Ut in libero magna. Quisque semper dictum nibh, in facilisis libero. Aliquam ut tortor condimentum, suscipit dui ac, ultricies diam. Proin ut elementum risus. Nunc congue nunc dolor. Morbi commodo, justo sit amet tempor interdum, erat tortor rutrum urna, a finibus diam velit vitae nulla. Ut semper suscipit vestibulum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec rhoncus aliquam mauris, id euismod purus.
-            </p>
+            <div className="is-size-5">
+                <p>
+                    This project marks my intentional initiation into web programming. The concept was conceived immediately after completing <a href="https://www.codecademy.com/" target="_blank">Codecademy</a>'s <span className="is-italic">Learn Intermediate JavaScript</span> course. As I mapped out my path to becoming a <span className="has-text-weight-bold">Full-Stack Developer</span>, I deliberately chose to build this simple web application using <span className="has-text-weight-bold">vanilla JavaScript</span>. My goal was to establish a foundational understanding, which I plan to later use to compare and contrast the developer experience when utilizing modern tools like <span className="has-text-weight-bold">React</span> and <span className="has-text-weight-bold">TypeScript</span>.
+                </p>
+                <p>
+                    Though simple, this foundational project was invaluable. It provided essential, hands-on lessons in <span className="has-text-weight-bold">state management</span>, <span className="has-text-weight-bold">API data fetching</span>, <span className="has-text-weight-bold">DOM manipulation</span>, and <span className="has-text-weight-bold">robust error handling</span>. These concepts remain cornerstones of my daily development practice and solidified my resolve to pursue this career path.
+                </p>
+            </div>
         </>
 
     )
