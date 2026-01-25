@@ -2,8 +2,10 @@
 
 import Header from "../components/Header";
 import skills from "../data/skills";
+import competencies from "../data/competencies";
 import Tags from "../components/Tags";
 import Footer from "../components/Footer";
+import Competencies from "../components/Competencies";
 import resume from "../assets/documents/Thomas_Brun_Resume.pdf";
 
 const About = () => {
@@ -40,6 +42,10 @@ const About = () => {
                         </section>
                     </div>
                     <div className="column">
+                        <section className="section">
+                            <h2 className="title is-2">What I Do</h2>
+                            <Competencies competencies={competencies} />
+                        </section>
                         <section className="section">
                             <h2 className="title is-2">My Skills</h2>
                             <p className="subtitle mt-2">Click on any of them to find out more 👀</p>
