@@ -133,6 +133,20 @@ const skills: Skill[] = [
         hasAddons: true,
         iconName: ["fab", "fa-jira"],
         rank: 4
+    },
+    {
+        name: "vue",
+        displayName: "Vue.js",
+        hasAddons: true,
+        iconName: ["fab", "fa-vuejs"],
+        rank: 7
+    },
+    {
+        name: "redux",
+        displayName: "Redux",
+        hasAddons: true,
+        iconName: ["fas", "fa-flask"],
+        rank: 6
     }
 ];
 
