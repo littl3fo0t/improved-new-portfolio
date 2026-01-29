@@ -25,7 +25,7 @@ const projects: Project[] = [
         description: "A single page application built using Vue.js that displays 5 cards and determines the best Poker Hand from the current selection.",
         links: {
             github: "https://github.com/littl3fo0t/Poker-Hand-Analyzer",
-            live: null
+            live: "https://littl3fo0t.github.io/Poker-Hand-Analyzer/"
         },
         isComplete: true,
         createdDate: new Date("2025-12-06")
