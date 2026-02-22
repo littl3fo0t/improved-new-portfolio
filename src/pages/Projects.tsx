@@ -5,8 +5,10 @@ import Footer from "../components/Footer";
 import Header from "../components/Header";
 import ProjectsContainer from "../components/ProjectsContainer";
 import projects from "../data/projects";
+import tagsData from "../data/tags";
 import { useSearchParams } from "react-router-dom";
 import type { Project } from "../types/project";
+import type Tag from "../types/tag";
 import NoProjectsFound from "../components/NoProjectsFound";
 
 const Projects: React.FC = () => {
@@ -14,6 +16,10 @@ const Projects: React.FC = () => {
     const [tag, setTag] = useState<string | null>(null);
     const [selectedProjects, setSelectedProjects] = useState(projects);
     const [sortedProjects, setSortedProjects] = useState<Project[]>([]);
+
+    const filterLabel: string | null = tag
+        ? (tag in tagsData ? tagsData[tag as Tag].label : tag)
+        : null;
 
     // Step 1 - Get tag from the search query (if any)
     useEffect(() => {
@@ -36,7 +42,7 @@ const Projects: React.FC = () => {
     useEffect(() => {
         setSortedProjects(
             [...selectedProjects].sort(
-                (a, b) => a.createdDate.getTime() - b.createdDate.getTime()
+                (a, b) => b.createdDate.getTime() - a.createdDate.getTime()
             )
         );
     }, [selectedProjects]);
@@ -57,9 +63,9 @@ const Projects: React.FC = () => {
                     <h1 className="title is-spaced is-size-1-desktop is-size-2-tablet is-size-3-mobile">Projects</h1>
                 </div>
                 <div className="container">
-                    {tag && sortedProjects.length > 0 && (
+                    {filterLabel && sortedProjects.length > 0 && (
                         <button className="button is-danger is-outlined" onClick={handleClick}>
-                            <span>{tag}</span>
+                            <span>Current filter: {filterLabel}</span>
                             <span className="icon">
                                 <i className="fas fa-times"></i>
                             </span>

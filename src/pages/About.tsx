@@ -1,15 +1,15 @@
 // About Page
 
 import Header from "../components/Header";
-import skills from "../data/skills";
-import competencies from "../data/competencies";
-import Tags from "../components/Tags";
+import tags from "../data/tags";
+import type TagDetails from "../types/tagDetails";
+import TagList from "../components/tags/TagList";
 import Footer from "../components/Footer";
-import Competencies from "../components/Competencies";
 import resume from "../assets/documents/Thomas_Brun_Resume.pdf";
 
 const About = () => {
-    const sortedSkills = skills.sort((a, b) => b.rank - a.rank);
+    const technicalTags: Partial<TagDetails> = Object.fromEntries(Object.entries(tags).filter(([, details]) => details.isTechnical));
+    const nonTechnicalTags: Partial<TagDetails> = Object.fromEntries(Object.entries(tags).filter(([, details]) => !details.isTechnical));
 
     return (
         <>
@@ -44,12 +44,12 @@ const About = () => {
                     <div className="column">
                         <section className="section">
                             <h2 className="title is-2">What I Do</h2>
-                            <Competencies competencies={competencies} />
+                            <TagList tags={nonTechnicalTags} />
                         </section>
                         <section className="section">
                             <h2 className="title is-2">My Skills</h2>
                             <p className="subtitle mt-2">Click on any of them to find out more 👀</p>
-                            <Tags skills={sortedSkills} />
+                            <TagList tags={technicalTags} />
                         </section>
                     </div>
                 </div>

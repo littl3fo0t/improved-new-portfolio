@@ -3,9 +3,11 @@
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import projects from "../data/projects";
-import Tags from "../components/Tags";
-import convertTag from "../utils/convertTags";
+import tagsData from "../data/tags";
+import type TagDetails from "../types/tagDetails";
+import type Tag from "../types/tag";
 import ProjectLinks from "./ProjectLinks";
+import TagList from "./tags/TagList";
 
 interface ProjectDetailsProps {
     id: number;
@@ -21,6 +23,12 @@ const ProjectDetails: React.FC<ProjectDetailsProps> = ({ id, children }) => {
 
     const { title, tags, links } = project;
 
+    const projectTagDetails: Partial<TagDetails> = Object.fromEntries(
+        tags
+            .filter((tag): tag is Tag => tag in tagsData)
+            .map((tag) => [tag, tagsData[tag as Tag]])
+    );
+
     return (
         <>
             <title>Thomas Brun | {title}</title>
@@ -34,7 +42,7 @@ const ProjectDetails: React.FC<ProjectDetailsProps> = ({ id, children }) => {
                 <div className="content">
                     <section className="mt-6">
                         <h2 className="is-spaced">Tech Stack</h2>
-                        <Tags skills={tags.map(tag => convertTag(tag))} />
+                        <TagList tags={projectTagDetails} />
                     </section>
                     <section>
                         <h2 className="is-spaced mt-6">Project Overview</h2>
