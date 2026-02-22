@@ -5,7 +5,7 @@ const Project3: React.FC = () => {
         <>
             <div className="is-size-5">
                 <p>
-                    The Poker Hand Analyzer is a fun and interactive single-page application built with <a href="https://vuejs.org/">Vue.js</a> that simulates drawing, evaluating, and improving poker hands using live data from the <a href="https://deckofcardsapi.com/">Deck of Cards API</a>.
+                    The Poker Hand Analyzer is a fun and interactive single-page application built with <a href="https://vuejs.org/" target="_blank" rel="noopener noreferrer">Vue.js</a> that simulates drawing, evaluating, and improving poker hands using live data from the <a href="https://deckofcardsapi.com/" target="_blank" rel="noopener noreferrer">Deck of Cards API</a>.
                 </p>
                 <p>
                     The app starts by generating a fresh deck and automatically dealing five cards. It then evaluates the best possible poker hand from the current selection (such as <span className="is-italic">Pair</span>, <span className="is-italic">Three of a Kind</span>, <span className="is-italic">Straight</span>, or <span className="is-italic">Flush</span>) and displays the result immediately. Players can click any card to “flip” it, visually turning it over, and then choose to swap all flipped cards for new ones. After each swap, the application re-evaluates the hand and updates the result in real time. Players can perform up to two swaps per game, after which the deck is reshuffled, the state resets, and a new hand is dealt.

@@ -54,9 +54,9 @@ const projects: Project[] = [
         description: "A RESTful API designed and implemented from scratch using Bun, Hono, and TypeScript, following standard REST principles.",
         links: {
             github: "https://github.com/NSCC-ITC-Winter2026-PROG5016-700-MCa/assignment2-restapi-littl3fo0t",
-            live: "https://assignment2-restapi-thomasbrun.onrender.com/api/cards"
+            live: "https://assignment2-restapi-thomasbrun.onrender.com"
         },
-        isComplete: false,
+        isComplete: true,
         createdDate: new Date("2026-01-19")
     },
     {
