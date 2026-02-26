@@ -69,7 +69,7 @@ const projects: Project[] = [
             github: "https://github.com/NSCC-ITC-Winter2026-WEBD5020-701-MCr/final-project-group3",
             live: "https://www.shorelinewoodworks.ca/"
         },
-        isComplete: false,
+        isComplete: true,
         createdDate: new Date("2026-02-03")
     }
 ];
